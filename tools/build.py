@@ -105,7 +105,7 @@ class Page:
             return f"{h}:{m:02d}"
         suffix = "am" if h < 12 else "pm"
         h12 = h % 12 or 12
-        return f"{h12}:{m:02d} {suffix}" if m else f"{h12} {suffix}"
+        return f"{h12}:{m:02d}\u00a0{suffix}" if m else f"{h12}\u00a0{suffix}"
 
     def next_meeting(self) -> str:
         date = self.raw("schedule.next_meeting")
@@ -227,7 +227,7 @@ class Page:
         reg = self.t("schedule.regular", self.ui("coming_soon"))
         time = self.raw("schedule.time")
         t = esc(self.fmt_time(time)) if time else self.t("schedule.time", self.ui("time_soon"))
-        return f"{reg} · {t}"
+        return f"{reg}&nbsp;· {t}"
 
     def n(self, path: str) -> int:
         return len(self.raw(path) or [])
