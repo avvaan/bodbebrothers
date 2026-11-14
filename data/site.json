@@ -1,537 +1,158 @@
 {
   "_help": "Единственный источник правды для сайта. После правки запустите: python3 tools/build.py. Поля со значением null показываются на сайте как «скоро». Подробности в README.md.",
-  "languages": [
-    "en"
-  ],
-  "_languages_help": "Какие версии собирать. [\"en\"] — только английская. [\"en\", \"ru\"] — плюс русская в /ru/ (русские тексты уже есть в этом файле).",
+
   "schedule": {
-    "_help": "next_meeting: дата ближайшей встречи в формате ГГГГ-ММ-ДД, например \"2026-12-04\". time: время в 24-часовом формате, например \"19:00\". regular: как часто встречаемся, своими словами на обоих языках.",
+    "_help": "next_meeting: дата ближайшей встречи в формате ГГГГ-ММ-ДД, например \"2026-12-01\". time: время в 24-часовом формате, например \"19:00\". regular: как часто встречаемся. room: где именно в здании.",
     "next_meeting": null,
     "time": "19:00",
-    "regular": {
-      "en": "1st & 3rd Tuesday of the month",
-      "ru": "Первый и третий вторник месяца"
-    },
-    "room": {
-      "en": null,
-      "ru": null
-    }
+    "regular": "1st & 3rd Tuesday of the month",
+    "room": null
   },
+
   "contact": {
     "_help": "Контакт для записи. Только то, что уже опубликовано на сайте прихода или что прямо дал о. Андрей. Личные телефоны участников сюда не пишем.",
-    "signup_phone": null,
-    "signup_email": null,
-    "signup_person": {
-      "en": null,
-      "ru": null
-    }
+    "signup_email": null
   },
-  "parish": {
-    "name": {
-      "en": "Saint Nina Orthodox Church",
-      "ru": "Храм святой равноапостольной Нины"
-    },
-    "short": {
-      "en": "Saint Nina Orthodox Church",
-      "ru": "Приход святой Нины"
-    },
-    "jurisdiction": {
-      "en": "Orthodox Church in America · Diocese of the South",
-      "ru": "Православная Церковь в Америке · Епархия Юга"
-    },
+
+  "venue": {
+    "name": "Saint Nina Orthodox Church",
     "address_line1": "6832 Hanging Moss Rd",
     "address_line2": "Orlando, FL 32807",
     "phone": "(407) 536-1071",
     "phone_tel": "+14075361071",
     "website": "https://www.stninaorlando.org",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=6832+Hanging+Moss+Rd%2C+Orlando%2C+FL+32807",
-    "rector": {
-      "en": "Fr. Andrew Syrkin, Rector",
-      "ru": "о. Андрей Сыркин, настоятель"
-    }
+    "website_label": "stninaorlando.org",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=6832+Hanging+Moss+Rd%2C+Orlando%2C+FL+32807"
   },
+
   "ui": {
-    "site_title": {
-      "en": "Bodbe Brothers — a men's singing club in Orlando",
-      "ru": "Bodbe Brothers — мужской певческий клуб в Орландо"
-    },
-    "meta_description": {
-      "en": "A men's club at Saint Nina Orthodox Church in Orlando. Half the evening we sing, half we sit at the table. No auditions, no sheet music.",
-      "ru": "Мужской клуб при храме святой Нины в Орландо. Полвечера поём, полвечера сидим за столом. Без прослушиваний и без нот."
-    },
-    "skip_link": {
-      "en": "Skip to content",
-      "ru": "К содержанию"
-    },
-    "lang_switch_label": {
-      "en": "Русский",
-      "ru": "English"
-    },
-    "lang_switch_aria": {
-      "en": "Читать по-русски",
-      "ru": "Read in English"
-    },
-    "coming_soon": {
-      "en": "coming soon",
-      "ru": "скоро сообщим"
-    },
-    "date_soon": {
-      "en": "date coming soon",
-      "ru": "дата скоро"
-    },
-    "illustration_note": {
-      "en": "Illustration",
-      "ru": "Иллюстрация"
-    },
-    "time_soon": {
-      "en": "time coming soon",
-      "ru": "время уточняется"
-    },
-    "answer_soon": {
-      "en": "We'll answer this one soon.",
-      "ru": "Ответ скоро появится."
-    },
-    "listen": {
-      "en": "Listen and learn",
-      "ru": "Послушать и выучить"
-    },
-    "audio_soon": {
-      "en": "Practice recording coming soon",
-      "ru": "Запись для разучивания скоро"
-    }
+    "site_title": "Bodbe Brothers — a men's singing club in Orlando",
+    "meta_description": "A men's singing club in Orlando. Half the evening we sing, half we sit at the table. No auditions, no sheet music, free.",
+    "skip_link": "Skip to content",
+    "coming_soon": "coming soon",
+    "date_soon": "date coming soon",
+    "time_soon": "time coming soon",
+    "answer_soon": "We'll answer this one soon.",
+    "audio_soon": "Practice recording coming soon"
   },
+
   "hero": {
-    "eyebrow": {
-      "en": "Saint Nina Orthodox Church · Orlando",
-      "ru": "Приход святой Нины · Орландо"
-    },
+    "eyebrow": "Orlando, Florida",
     "title": "Bodbe Brothers",
-    "tagline": {
-      "en": "Half the evening we sing. The other half we eat.",
-      "ru": "Полвечера поём. Полвечера сидим за столом."
-    },
-    "lead": {
-      "en": "A men's club at Saint Nina Orthodox Church in Orlando. No auditions, no sheet music, no experience needed. Just come.",
-      "ru": "Мужской клуб при православном храме святой Нины в Орландо. Без прослушиваний, без нот, без опыта. Просто приходите."
-    },
-    "cta_prefix": {
-      "en": "Next meeting",
-      "ru": "Следующая встреча"
-    },
-    "image_alt": {
-      "en": "Illustration: men singing together at a long candlelit table under a grapevine at sunset",
-      "ru": "Иллюстрация: мужчины поют за длинным столом со свечами под виноградной лозой на закате"
-    },
-    "cta_prefix_regular": {
-      "en": "We meet",
-      "ru": "Встречаемся"
-    }
+    "tagline": "Half the evening we sing. The other half we eat.",
+    "lead": "A men's singing club in Orlando. No auditions, no sheet music, no experience needed. Just come.",
+    "cta_prefix": "Next meeting",
+    "cta_prefix_regular": "We meet",
+    "image_alt": "Illustration: men singing together at a long candlelit table under a grapevine at sunset"
   },
+
   "about": {
-    "kicker": {
-      "en": "What this is",
-      "ru": "Что это такое"
-    },
-    "title": {
-      "en": "A club, not a choir loft",
-      "ru": "Клуб, а не клирос"
-    },
-    "body": {
-      "en": "Bodbe Brothers is a bunch of men who get together to sing and to eat. About forty-five minutes of singing, about forty-five minutes at the table. That's the whole plan.",
-      "ru": "Bodbe Brothers — это мужчины, которые собираются попеть и посидеть за столом. Минут сорок пять поём, минут сорок пять едим и разговариваем. Вот и весь план."
-    },
-    "not_title": {
-      "en": "What it isn't",
-      "ru": "Чего здесь не будет"
-    },
+    "kicker": "What this is",
+    "title": "A club, not a choir",
+    "body": "Bodbe Brothers is a bunch of men who get together to sing and to eat. About forty-five minutes of singing, about forty-five minutes at the table. That's the whole plan.",
+    "not_title": "What it isn't",
     "nots": [
-      {
-        "title": {
-          "en": "No auditions.",
-          "ru": "Прослушиваний нет."
-        },
-        "text": {
-          "en": "Nobody will ask you to sing alone. Ever.",
-          "ru": "Петь в одиночку никто не попросит. Никогда."
-        }
-      },
-      {
-        "title": {
-          "en": "No sheet music.",
-          "ru": "Ноты не нужны."
-        },
-        "text": {
-          "en": "We learn by ear, one line at a time, the way men have always learned songs at the table.",
-          "ru": "Учим на слух, по строчке, как испокон веку учили песни за столом."
-        }
-      },
-      {
-        "title": {
-          "en": "Not the church choir.",
-          "ru": "Это не церковный хор."
-        },
-        "text": {
-          "en": "Nobody signs you up to sing on Sunday. We sing because it's good for us.",
-          "ru": "На воскресную службу никто не запишет. Поём, потому что это хорошо для души."
-        }
-      }
+      { "title": "No auditions.", "text": "Nobody will ask you to sing alone. Ever." },
+      { "title": "No sheet music.", "text": "We learn by ear, one line at a time, the way men have always learned songs at the table." },
+      { "title": "No concerts.", "text": "Nobody's putting you on a stage. We sing because it's good for us." }
     ],
-    "closer": {
-      "en": "If you've ever sung “Happy Birthday” at a party, you'll be fine. If you haven't, come anyway and sit next to someone loud.",
-      "ru": "Если вы хоть раз пели «С днём рождения» за столом, справитесь. А если нет, всё равно приходите и садитесь рядом с тем, кто поёт громко."
-    },
-    "image_alt": {
-      "en": "Illustration: men raising glasses of red wine over bread and candles",
-      "ru": "Иллюстрация: мужчины поднимают бокалы с красным вином над хлебом и свечами"
-    }
+    "closer": "If you've ever sung “Happy Birthday” at a party, you'll be fine. If you haven't, come anyway and sit next to someone loud.",
+    "image_alt": "Illustration: men raising glasses of red wine over bread and candles"
   },
+
   "how": {
-    "kicker": {
-      "en": "How an evening goes",
-      "ru": "Как проходит вечер"
-    },
-    "title": {
-      "en": "Three steps. No surprises.",
-      "ru": "Три шага. Без сюрпризов."
-    },
+    "kicker": "How an evening goes",
+    "title": "Three steps. No surprises.",
     "steps": [
-      {
-        "label": {
-          "en": "Gather",
-          "ru": "Собрались"
-        },
-        "text": {
-          "en": "Walk in, say hello, grab a coffee. Nobody expects you to know anyone. Fr. Andrew will be the one waving.",
-          "ru": "Заходите, здороваетесь, берёте кофе. Никто не ждёт, что вы кого-то знаете. Отец Андрей встретит."
-        }
-      },
-      {
-        "label": {
-          "en": "Sing",
-          "ru": "Попели"
-        },
-        "time": {
-          "en": "about 45 min",
-          "ru": "минут 45"
-        },
-        "text": {
-          "en": "A short warm-up, then one song, line by line. The leader sings, we sing it back. By the end you'll know a verse, maybe two.",
-          "ru": "Короткая распевка, потом одна песня, по строчке. Ведущий поёт, мы повторяем. К концу вечера куплет вы будете знать, а то и два."
-        }
-      },
-      {
-        "label": {
-          "en": "Sit down at the table",
-          "ru": "Сели за стол"
-        },
-        "time": {
-          "en": "about 45 min",
-          "ru": "минут 45"
-        },
-        "text": {
-          "en": "Food, something to drink, conversation. This is where strangers stop being strangers. Sometimes the singing starts again.",
-          "ru": "Еда, что-нибудь в стаканах, разговор. Здесь незнакомые перестают быть незнакомыми. Бывает, что песня начинается снова."
-        }
-      }
+      { "label": "Gather",
+        "text": "Walk in, say hello, grab a coffee. Nobody expects you to know anyone. Someone will be waving at you." },
+      { "label": "Sing", "time": "about 45 min",
+        "text": "A short warm-up, then one song, line by line. The leader sings, we sing it back. By the end you'll know a verse, maybe two." },
+      { "label": "Sit down at the table", "time": "about 45 min",
+        "text": "Food, something to drink, conversation. This is where strangers stop being strangers. Sometimes the singing starts again." }
     ],
-    "image_alt": {
-      "en": "Illustration: men of different ages singing from sheets in a stone hall, an older man conducting",
-      "ru": "Иллюстрация: мужчины разного возраста поют по листкам в каменном зале, пожилой мужчина дирижирует"
-    }
+    "image_alt": "Illustration: men of different ages singing from sheets in a stone hall, an older man conducting"
   },
+
   "bodbe": {
-    "kicker": {
-      "en": "Why “Bodbe”",
-      "ru": "Почему «Бодбе»"
-    },
-    "title": {
-      "en": "Say it: BOD-beh",
-      "ru": "Произносится: БОД-бе"
-    },
-    "georgian": "ბოდბე",
-    "georgian_label": {
-      "en": "“Bodbe” in Georgian script",
-      "ru": "«Бодбе» по-грузински"
-    },
+    "kicker": "Why “Bodbe”",
+    "title": "Say it: BOD-beh",
     "paras": [
-      {
-        "en": "Bodbe is a monastery in Kakheti, in the hills of eastern Georgia. Georgia the country, that is, not the state, though we hear Savannah is lovely.",
-        "ru": "Бодбе — монастырь в Кахетии, на холмах восточной Грузии. Той самой, за Кавказским хребтом, а не американского штата с персиками."
-      },
-      {
-        "en": "Saint Nina, who brought the Christian faith to Georgia, finished her life at Bodbe, and her relics rest there. She is the patron saint of our parish here in Orlando.",
-        "ru": "Святая Нина, просветительница Грузии, окончила свой путь в Бодбе, и там покоятся её мощи. Она покровительница нашего прихода в Орландо."
-      },
-      {
-        "en": "Her cross is woven from grapevine. We liked that: something that grows, ties together and ends up at a table. Hence the name: brothers of Bodbe.",
-        "ru": "Её крест сплетён из виноградной лозы. Нам это по душе: лоза растёт, переплетается и в конце концов оказывается на столе. Отсюда и название: братья из Бодбе."
-      }
+      "Bodbe is a village in Kakheti, the wine country of eastern Georgia. Georgia the country, that is, not the state, though we hear Savannah is lovely.",
+      "Kakheti is known for long tables, homemade wine, and men who sing together in harmony late into the evening.",
+      "That's the kind of evening we're after. Hence the name."
     ],
-    "cross_label": {
-      "en": "The grapevine cross of Saint Nina",
-      "ru": "Крест святой Нины из виноградной лозы"
-    }
+    "image_alt": "Illustration: vineyard hills of Kakheti at dusk"
   },
+
   "songs": {
-    "kicker": {
-      "en": "What we sing",
-      "ru": "Что поём"
-    },
-    "title": {
-      "en": "The first four songs",
-      "ru": "Первые четыре песни"
-    },
-    "intro": {
-      "en": "Short, singable, and old enough that nobody remembers who wrote them down first. Recordings to practise with will appear here as we make them.",
-      "ru": "Короткие, певучие и такие старые, что никто уже не помнит, кто записал их первым. Записи для разучивания появятся здесь, когда мы их сделаем."
-    },
+    "kicker": "What we sing",
+    "title": "The first songs",
+    "intro": "Short, singable, and old enough that nobody remembers who wrote them down first. Recordings to practise with will appear here as we make them.",
     "items": [
-      {
-        "title": {
-          "en": "Many Years",
-          "ru": "Многая лета"
-        },
-        "note": {
-          "en": "Mnogaya leta",
-          "ru": ""
-        },
-        "text": {
-          "en": "The Orthodox “Happy Birthday”: sung for name days, anniversaries, guests of honour. A handful of words; you'll be singing it by the second round.",
-          "ru": "Православное «С днём рождения»: поют на именины, на юбилеи, дорогому гостю. Слов немного, со второго раза вы уже поёте."
-        },
-        "audio": null
-      },
-      {
-        "title": {
-          "en": "Troparion to Saint Nina",
-          "ru": "Тропарь святой Нине"
-        },
-        "note": null,
-        "text": {
-          "en": "The short hymn to our patron saint. We'll learn it so we can sing it on her feast day in January.",
-          "ru": "Короткое песнопение нашей покровительнице. Выучим, чтобы спеть его на её праздник в январе."
-        },
-        "audio": null
-      },
-      {
-        "title": {
-          "en": "Shen Khar Venakhi",
-          "ru": "«Шен хар венахи»"
-        },
-        "note": {
-          "en": "შენ ხარ ვენახი",
-          "ru": "შენ ხარ ვენახი"
-        },
-        "text": {
-          "en": "A medieval Georgian hymn to the Mother of God. The title means “You are a vineyard.” Slow, in three voices, and once you've heard it you won't forget it.",
-          "ru": "Средневековый грузинский гимн Богородице. Название значит «Ты — виноградник», по-русски его часто зовут «Ты еси лоза». Медленный, на три голоса; кто однажды услышал, уже не забудет."
-        },
-        "audio": null
-      },
-      {
-        "title": {
-          "en": "Christmas carols",
-          "ru": "Рождественские колядки"
-        },
-        "note": null,
-        "text": {
-          "en": "Carols from the different homelands of our parish. Learned in the autumn, sung in December, see below.",
-          "ru": "Колядки из разных краёв, откуда родом наши прихожане. Учим осенью, поём в декабре, об этом ниже."
-        },
-        "audio": null
-      }
+      { "title": "Many Years", "note": null,
+        "text": "The toast song: sung for birthdays, anniversaries and guests of honour. A handful of words; you'll be singing it by the second round.",
+        "audio": null },
+      { "title": "Shen Khar Venakhi", "note": null,
+        "text": "A medieval Georgian song in three-part harmony. The title means “You are a vineyard.” Slow, and once you've heard it you won't forget it.",
+        "audio": null },
+      { "title": "Christmas carols", "note": null,
+        "text": "Carols from the different homelands of the men around the table. Learned in the autumn, sung in December, see below.",
+        "audio": null }
     ]
   },
+
   "goals": {
-    "kicker": {
-      "en": "What we're working toward",
-      "ru": "К чему готовимся"
-    },
-    "title": {
-      "en": "Two dates on the calendar",
-      "ru": "Две даты в календаре"
-    },
+    "kicker": "What we're working toward",
+    "title": "First stop: Christmas",
     "items": [
-      {
-        "when": {
-          "en": "Christmas",
-          "ru": "Рождество"
-        },
-        "title": {
-          "en": "Carols for those who can't come to church",
-          "ru": "Колядки для тех, кто не может прийти в храм"
-        },
-        "text": {
-          "en": "We'll take the carols to parishioners who are sick or elderly and can't make it to services. A few songs at the door, a few minutes of company.",
-          "ru": "Пойдём с колядками к больным и пожилым прихожанам, которые не могут прийти на службу. Несколько песен у порога, несколько минут вместе."
-        }
-      },
-      {
-        "when": {
-          "en": "January",
-          "ru": "Январь"
-        },
-        "title": {
-          "en": "Saint Nina's feast day",
-          "ru": "Престольный праздник святой Нины"
-        },
-        "text": {
-          "en": "Our parish feast. The plan is to sing for it, the troparion and Many Years at the very least.",
-          "ru": "Праздник нашего прихода. План — спеть на нём, как минимум тропарь и «Многая лета»."
-        }
-      }
+      { "when": "December",
+        "title": "Carols for people who can't get out",
+        "text": "We'll take the carols to people in our community who are sick or elderly and can't get out much. A few songs at the door, a few minutes of company." }
     ]
   },
+
   "when": {
-    "kicker": {
-      "en": "When and where",
-      "ru": "Когда и где"
-    },
-    "title": {
-      "en": "Tuesday nights at Saint Nina",
-      "ru": "По вторникам у святой Нины"
-    },
-    "day_label": {
-      "en": "When",
-      "ru": "Когда"
-    },
-    "next_label": {
-      "en": "Next meeting",
-      "ru": "Ближайшая встреча"
-    },
-    "where_label": {
-      "en": "Where",
-      "ru": "Где"
-    },
-    "map_button": {
-      "en": "Open in Google Maps",
-      "ru": "Открыть в Google Картах"
-    },
+    "kicker": "When and where",
+    "title": "Tuesday nights in Orlando",
+    "day_label": "When",
+    "next_label": "Next meeting",
+    "where_label": "Where",
+    "map_button": "Open in Google Maps",
     "parking": null
   },
+
   "faq": {
-    "kicker": {
-      "en": "Questions",
-      "ru": "Вопросы"
-    },
-    "title": {
-      "en": "Before you ask",
-      "ru": "Пока вы не спросили"
-    },
+    "kicker": "Questions",
+    "title": "Before you ask",
     "items": [
-      {
-        "q": {
-          "en": "I can't sing.",
-          "ru": "Я не умею петь."
-        },
-        "a": {
-          "en": "Most of us can't, officially. We learn by ear, in a group, and nobody sings alone. If you can hum along to the radio, you're in.",
-          "ru": "Официально большинство из нас тоже не умеет. Учим на слух, все вместе, и одному петь не придётся. Если подпеваете радио в машине, вам к нам."
-        }
-      },
-      {
-        "q": {
-          "en": "I'm not Orthodox. I've never been inside an Orthodox church.",
-          "ru": "Я не православный. Ни разу не был в православном храме."
-        },
-        "a": {
-          "en": "You're welcome. This is a club, not a service, and nobody will quiz you. Some of the songs are church songs; sing along or just listen, both are fine.",
-          "ru": "Приходите. Это клуб, а не богослужение, экзаменовать никто не будет. Часть песен церковные: можно подпевать, можно просто слушать."
-        }
-      },
-      {
-        "q": {
-          "en": "What language?",
-          "ru": "На каком языке?"
-        },
-        "a": {
-          "en": "We talk in English. Songs are in English, Church Slavonic and Georgian. We learn the words slowly, line by line, so nobody gets lost.",
-          "ru": "Разговариваем по-английски. Поём по-английски, по-церковнославянски и по-грузински. Слова учим медленно, по строчке, никто не потеряется."
-        }
-      },
-      {
-        "q": {
-          "en": "How much does it cost?",
-          "ru": "Сколько стоит?"
-        },
-        "a": {
-          "en": "Nothing. It's free.",
-          "ru": "Нисколько. Это бесплатно."
-        }
-      },
-      {
-        "q": {
-          "en": "What should I bring?",
-          "ru": "Что принести?"
-        },
-        "a": {
-          "en": "Just yourself. And maybe a friend.",
-          "ru": "Только себя. И, может быть, друга."
-        }
-      }
+      { "q": "I can't sing.",
+        "a": "Most of us can't, officially. We learn by ear, in a group, and nobody sings alone. If you can hum along to the radio, you're in." },
+      { "q": "We meet at a church. Do I have to be religious?",
+        "a": "No. This is a singing club, not a service, and nobody will quiz you on anything. Come as you are." },
+      { "q": "What language?",
+        "a": "We talk in English. A few songs are in other languages; we learn the words slowly, line by line, so nobody gets lost." },
+      { "q": "How much does it cost?",
+        "a": "Nothing. It's free." },
+      { "q": "What should I bring?",
+        "a": "Just yourself. And maybe a friend." }
     ]
   },
+
   "join": {
-    "kicker": {
-      "en": "How to join",
-      "ru": "Как присоединиться"
-    },
-    "title": {
-      "en": "Three ways in",
-      "ru": "Три способа прийти"
-    },
+    "kicker": "How to join",
+    "title": "Two ways in",
     "ways": [
-      {
-        "key": "visit",
-        "title": {
-          "en": "Just come",
-          "ru": "Просто приходите"
-        },
-        "text": {
-          "en": "No sign-up, no list, no fee. Just walk in.",
-          "ru": "Без записи, без списков, бесплатно. Просто заходите."
-        }
-      },
-      {
-        "key": "phone",
-        "title": {
-          "en": "Call the parish",
-          "ru": "Позвоните в приход"
-        },
-        "text": {
-          "en": "Ask about Bodbe Brothers and we'll get back to you.",
-          "ru": "Спросите про Bodbe Brothers, вам перезвонят."
-        }
-      },
-      {
-        "key": "liturgy",
-        "title": {
-          "en": "Find Fr. Andrew after Liturgy",
-          "ru": "Подойдите к отцу Андрею после Литургии"
-        },
-        "text": {
-          "en": "On Sunday, after the service. He's the one in black, with the beard. That narrows it down a little.",
-          "ru": "В воскресенье после службы. Он в чёрном и с бородой. Это немного сужает поиск."
-        }
-      }
-    ],
-    "service_times": {
-      "en": "Service times are on the parish website",
-      "ru": "Расписание богослужений на сайте прихода"
-    }
+      { "key": "visit", "title": "Just come",
+        "text": "No sign-up, no list, no fee. Just walk in." },
+      { "key": "phone", "title": "Call first, if you'd rather",
+        "text": "Call the office and ask about Bodbe Brothers. We'll get back to you." }
+    ]
   },
+
   "footer": {
-    "parish_link": {
-      "en": "Parish website",
-      "ru": "Сайт прихода"
-    },
-    "note": {
-      "en": "Bodbe Brothers is a men's club of Saint Nina Orthodox Church, Orlando.",
-      "ru": "Bodbe Brothers — мужской клуб храма святой Нины в Орландо."
-    },
-    "images_note": {
-      "en": "Photographs on this page are illustrations, not pictures of our members.",
-      "ru": "Фотографии на этой странице — иллюстрации, а не снимки участников клуба."
-    }
+    "venue_link": "Venue",
+    "note": "Bodbe Brothers is a men's singing club that meets at Saint Nina Orthodox Church, Orlando.",
+    "images_note": "Photographs on this page are illustrations, not pictures of our members."
   }
 }

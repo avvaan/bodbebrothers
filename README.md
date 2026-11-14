@@ -1,7 +1,7 @@
 # bodbebrothers.com
 
 Статический сайт мужского певческого клуба **Bodbe Brothers** при храме святой Нины
-(Saint Nina Orthodox Church, Орландо). Одна страница на английском.
+(Saint Nina Orthodox Church, Орландо). Одна страница, только на английском.
 
 Сайт собирается из одного файла данных `data/site.json` маленьким скриптом на Python.
 Без фреймворков, без npm, без зависимостей, без трекеров и внешних шрифтов.
@@ -16,13 +16,13 @@ python3 tools/build.py --serve
 
 Откройте http://localhost:8000/. Остановить сервер: Ctrl+C.
 
-Предпросмотр с пометками: незаполненные поля выделены розовым, непереведённые синим.
+Предпросмотр с пометками: незаполненные поля выделены розовым.
 
 ```bash
 python3 tools/build.py --preview --serve
 ```
 
-Проверка перед публикацией: ссылки, alt, переводы, вес страницы, контраст, грузинские надписи.
+Проверка перед публикацией: ссылки, alt, незаполненные поля, вес страницы, контраст.
 
 ```bash
 python3 tools/build.py && python3 tools/check_site.py
@@ -36,15 +36,15 @@ python3 tools/build.py && python3 tools/check_site.py
 "schedule": {
   "next_meeting": null,
   "time": "19:00",
-  "regular": { "en": "1st & 3rd Tuesday of the month", "ru": "Первый и третий вторник месяца" },
-  "room": { "en": null, "ru": null }
+  "regular": "1st & 3rd Tuesday of the month",
+  "room": null
 }
 ```
 
 - **Дата ближайшей встречи**: вместо `null` напишите дату в кавычках в формате ГГГГ-ММ-ДД, например `"next_meeting": "2026-12-01"`. Сайт сам напишет «Tuesday, December 1». Пока там `null`, на кнопке показывается регулярное расписание («We meet: 1st & 3rd Tuesday of the month · 7 pm»).
 - **Время**: 24-часовой формат, `"19:00"`. На сайте получится «7 pm».
-- **День**: `"regular"`. Английский текст в `"en"`.
-- **Помещение** (трапезная, зал): `"room"`, например `{ "en": "Parish hall", "ru": "Трапезная" }`.
+- **Регулярность**: `"regular"`, обычный текст по-английски.
+- **Помещение**: `"room"`, например `"room": "Parish hall"`.
 
 Сохраните файл и пересоберите (`python3 tools/build.py`). Если сайт опубликован в Cloudflare Pages
 и подключён к GitHub, достаточно сохранить изменение в репозитории: сборка запустится сама.
@@ -59,15 +59,14 @@ python3 tools/build.py && python3 tools/check_site.py
 
 ```json
 {
-  "title": { "en": "Song title", "ru": "Название" },
-  "note":  { "en": "Subtitle or original title", "ru": "" },
-  "text":  { "en": "One or two sentences about the song.", "ru": "..." },
+  "title": "Song title",
+  "note": null,
+  "text": "One or two sentences about the song.",
   "audio": null
 }
 ```
 
-Не забудьте запятую между элементами списка. `note` можно оставить `null`.
-Заголовок раздела «The first four songs» тоже лежит в данных (`songs.title`), поменяйте число.
+Не забудьте запятую между элементами списка. `note` — необязательный подзаголовок, можно оставить `null`.
 
 ## Как добавить аудио для разучивания
 
@@ -89,14 +88,9 @@ python3 tools/build.py && python3 tools/check_site.py
 | `hero-m-600.webp`, `hero-m-900.webp` | первый экран, телефон | 4:5 |
 | `table-720.webp`, `table-1200.webp` | «A club, not a choir loft» | 3:2 |
 | `singing-720.webp`, `singing-1200.webp` | «Three steps» | 3:2 |
+| `kakheti-900.webp`, `kakheti-1600.webp` | «Why Bodbe» (пейзаж, без людей) | 16:9 |
 
 Поправьте тексты `image_alt` в данных и уберите `footer.images_note`.
-
-## Русская версия
-
-Сейчас собирается только английская. Русские тексты в `data/site.json` сохранены.
-Чтобы включить версию `/ru/`, поменяйте `"languages": ["en"]` на `"languages": ["en", "ru"]`:
-появятся страница `/ru/` и переключатель языка в шапке.
 
 ## Публикация в Cloudflare Pages
 
@@ -123,8 +117,7 @@ python3 tools/build.py && python3 tools/check_site.py
 ```
 data/site.json        все тексты, расписание, контакты, песни
 src/style.css         стили
-src/nina-cross.svg    крест святой Нины из лозы (из Higgsfield)
-assets/fonts/         Alegreya, Alegreya Sans, Noto Serif Georgian (SIL OFL, лицензии рядом)
+assets/fonts/         Alegreya, Alegreya Sans (SIL OFL, лицензии рядом)
 assets/img/           изображения (WebP) и favicon
 assets/audio/         записи для разучивания (пока пусто)
 tools/build.py        сборка в public/

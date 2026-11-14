@@ -5,9 +5,9 @@
     python3 tools/check_site.py --external  # заодно проверить внешние ссылки (нужен интернет)
 
 Проверяет: битые внутренние ссылки и якоря, пустые или отсутствующие alt,
-отсутствующие переводы и незаполненные поля в data/site.json, lang и noindex
-на каждой странице, robots.txt, вес главной страницы, контраст цветов палитры,
-и перечисляет все грузинские надписи для проверки носителем языка.
+незаполненные поля в data/site.json, lang и noindex на каждой странице,
+robots.txt, вес главной страницы, контраст цветов палитры. Грузинских надписей
+на сайте быть не должно: найденные считаются ошибкой.
 Код выхода 1, если есть ошибки (предупреждения не считаются).
 """
 from __future__ import annotations
@@ -23,7 +23,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "public"
 DATA = ROOT / "data" / "site.json"
-LANGS = ("en", "ru")
 
 HTML_BUDGET = 60 * 1024          # сама страница
 INITIAL_BUDGET = 900 * 1024      # страница + CSS + шрифты + картинки (мобильный вариант)
@@ -81,33 +80,19 @@ def contrast(c1: str, c2: str) -> float:
     return (l1 + 0.05) / (l2 + 0.05)
 
 
-def walk_data(node, path="", enabled=LANGS):
-    """Возвращает (null_fields, untranslated)."""
-    nulls, untr = [], []
+def walk_data(node, path=""):
+    """Возвращает список путей к полям со значением null."""
+    nulls = []
     if isinstance(node, dict):
-        if set(node) & set(LANGS) and set(node) <= set(LANGS) | {"_help"}:
-            vals = {l: node.get(l) for l in enabled}
-            if all(v is None for v in vals.values()):
-                nulls.append(path)
-            else:
-                for l, v in vals.items():
-                    if v is None:
-                        untr.append(f"{path} [{l}]")
-            return nulls, untr
         for k, v in node.items():
-            if k.startswith("_") or k == "languages":
-                continue
-            n, u = walk_data(v, f"{path}.{k}" if path else k, enabled)
-            nulls += n
-            untr += u
+            if not k.startswith("_"):
+                nulls += walk_data(v, f"{path}.{k}" if path else k)
     elif isinstance(node, list):
         for i, v in enumerate(node):
-            n, u = walk_data(v, f"{path}.{i}", enabled)
-            nulls += n
-            untr += u
+            nulls += walk_data(v, f"{path}.{i}")
     elif node is None:
         nulls.append(path)
-    return nulls, untr
+    return nulls
 
 
 def main() -> int:
@@ -126,7 +111,6 @@ def main() -> int:
         return 1
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    enabled = tuple(data.get("languages") or LANGS)
     pages = sorted(OUT.rglob("*.html"))
     for page in pages:
         rel = page.relative_to(OUT)
@@ -136,7 +120,7 @@ def main() -> int:
 
         if 'class="pv' in html:
             errors.append(f"{rel}: в странице остались пометки предпросмотра — пересоберите без --preview")
-        if c.html_lang not in enabled:
+        if c.html_lang != "en":
             errors.append(f"{rel}: нет или неверный lang у <html> ({c.html_lang!r})")
         if not c.robots or "noindex" not in c.robots:
             errors.append(f"{rel}: нет <meta name=robots content=noindex>")
@@ -170,7 +154,7 @@ def main() -> int:
         if rel.name == "index.html" and len(rel.parts) == 1:
             size_html = len(html.encode("utf-8"))
             css = OUT / "assets" / "style.css"
-            fonts = sum(f.stat().st_size for f in (OUT / "assets" / "fonts").glob("*latin-*.woff2"))
+            fonts = sum(f.stat().st_size for f in (OUT / "assets" / "fonts").glob("*.woff2"))
             # картинки: самый маленький вариант каждой <img> (как на телефоне)
             imgs = 0
             for img in c.imgs:
@@ -180,7 +164,7 @@ def main() -> int:
                     imgs += p.stat().st_size
             total = size_html + css.stat().st_size + fonts + imgs
             info.append(f"Главная: HTML {size_html / 1024:.0f} КБ, CSS {css.stat().st_size / 1024:.0f} КБ, "
-                        f"шрифты (латиница) {fonts / 1024:.0f} КБ, картинки (мобильные) {imgs / 1024:.0f} КБ, "
+                        f"шрифты {fonts / 1024:.0f} КБ, картинки (мобильные) {imgs / 1024:.0f} КБ, "
                         f"итого ≈ {total / 1024:.0f} КБ")
             if size_html > HTML_BUDGET:
                 warns.append(f"HTML главной {size_html / 1024:.0f} КБ > {HTML_BUDGET // 1024} КБ")
@@ -192,9 +176,7 @@ def main() -> int:
         errors.append("robots.txt отсутствует или не закрывает сайт")
 
     # данные
-    nulls, untr = walk_data(data, enabled=enabled)
-    for u in untr:
-        errors.append(f"нет перевода: {u}")
+    nulls = walk_data(data)
 
     # контраст палитры (значения из src/style.css)
     css_src = (ROOT / "src" / "style.css").read_text(encoding="utf-8")
@@ -228,10 +210,8 @@ def main() -> int:
         print(f"\nНезаполненные поля в data/site.json ({len(nulls)}), на сайте показана заглушка:")
         for n in nulls:
             print("  ·", n)
-    if georgian:
-        print("\nГрузинские надписи — проверить носителю языка до публикации:")
-        for g, where in georgian.items():
-            print(f"  · {g}  ({', '.join(sorted(where))})")
+    for g, where in georgian.items():
+        errors.append(f"грузинская надпись «{g}» ({', '.join(sorted(where))}) — на сайте их быть не должно")
     if externals and not args.external:
         print(f"\nВнешних ссылок: {len(externals)} (не проверялись; добавьте --external)")
     if warns:
