@@ -1,0 +1,95 @@
+{
+  "_help": "Единственный источник правды для сайта. После правки запустите: python3 tools/build.py. Поля со значением null показываются на сайте как «скоро». Подробности в README.md.",
+
+  "schedule": {
+    "_help": "next_meeting: дата ближайшей встречи в формате ГГГГ-ММ-ДД, например \"2026-12-04\". time: время в 24-часовом формате, например \"19:00\". regular: как часто встречаемся, своими словами на обоих языках.",
+    "next_meeting": null,
+    "time": null,
+    "regular": { "en": null, "ru": null },
+    "room": { "en": null, "ru": null }
+  },
+
+  "contact": {
+    "_help": "Контакт для записи. Только то, что уже опубликовано на сайте прихода или что прямо дал о. Андрей. Личные телефоны участников сюда не пишем.",
+    "signup_phone": null,
+    "signup_email": null,
+    "signup_person": { "en": null, "ru": null }
+  },
+
+  "parish": {
+    "name": { "en": "Saint Nina Orthodox Church", "ru": "Храм святой равноапостольной Нины" },
+    "short": { "en": "Saint Nina Orthodox Church", "ru": "Приход святой Нины" },
+    "jurisdiction": { "en": "Orthodox Church in America · Diocese of the South", "ru": "Православная Церковь в Америке · Епархия Юга" },
+    "address_line1": "6832 Hanging Moss Rd",
+    "address_line2": "Orlando, FL 32807",
+    "phone": "(407) 536-1071",
+    "phone_tel": "+14075361071",
+    "website": "https://www.stninaorlando.org",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=6832+Hanging+Moss+Rd%2C+Orlando%2C+FL+32807",
+    "rector": { "en": "Fr. Andrew Syrkin, Rector", "ru": "о. Андрей Сыркин, настоятель" }
+  },
+
+  "ui": {
+    "site_title": { "en": "Bodbe Brothers — a men's singing club in Orlando", "ru": "Bodbe Brothers — мужской певческий клуб в Орландо" },
+    "meta_description": {
+      "en": "A men's club at Saint Nina Orthodox Church in Orlando. Half the evening we sing, half we sit at the table. No auditions, no sheet music.",
+      "ru": "Мужской клуб при храме святой Нины в Орландо. Полвечера поём, полвечера сидим за столом. Без прослушиваний и без нот."
+    },
+    "skip_link": { "en": "Skip to content", "ru": "К содержанию" },
+    "lang_switch_label": { "en": "Русский", "ru": "English" },
+    "lang_switch_aria": { "en": "Читать по-русски", "ru": "Read in English" },
+    "coming_soon": { "en": "coming soon", "ru": "скоро сообщим" },
+    "date_soon": { "en": "date coming soon", "ru": "дата скоро" },
+    "illustration_note": { "en": "Illustration", "ru": "Иллюстрация" }
+  },
+
+  "hero": {
+    "eyebrow": { "en": "Saint Nina Orthodox Church · Orlando", "ru": "Приход святой Нины · Орландо" },
+    "title": "Bodbe Brothers",
+    "tagline": {
+      "en": "Half the evening we sing. The other half we eat.",
+      "ru": "Полвечера поём. Полвечера сидим за столом."
+    },
+    "lead": {
+      "en": "A men's club at Saint Nina Orthodox Church in Orlando. No auditions, no sheet music, no experience needed. Just come.",
+      "ru": "Мужской клуб при православном храме святой Нины в Орландо. Без прослушиваний, без нот, без опыта. Просто приходите."
+    },
+    "cta_prefix": { "en": "Next meeting", "ru": "Следующая встреча" },
+    "image_alt": {
+      "en": "Illustration: men singing together at a long candlelit table under a grapevine at sunset",
+      "ru": "Иллюстрация: мужчины поют за длинным столом со свечами под виноградной лозой на закате"
+    }
+  },
+
+  "about": {
+    "kicker": { "en": "What this is", "ru": "Что это такое" },
+    "title": { "en": "A club, not a choir loft", "ru": "Клуб, а не клирос" },
+    "body": {
+      "en": "Bodbe Brothers is a bunch of men who get together to sing and to eat. About forty-five minutes of singing, about forty-five minutes at the table. That's the whole plan.",
+      "ru": "Bodbe Brothers — это мужчины, которые собираются попеть и посидеть за столом. Минут сорок пять поём, минут сорок пять едим и разговариваем. Вот и весь план."
+    },
+    "not_title": { "en": "What it isn't", "ru": "Чего здесь не будет" },
+    "nots": [
+      {
+        "title": { "en": "No auditions.", "ru": "Прослушиваний нет." },
+        "text": { "en": "Nobody will ask you to sing alone. Ever.", "ru": "Петь в одиночку никто не попросит. Никогда." }
+      },
+      {
+        "title": { "en": "No sheet music.", "ru": "Ноты не нужны." },
+        "text": { "en": "We learn by ear, one line at a time, the way men have always learned songs at the table.", "ru": "Учим на слух, по строчке, как испокон веку учили песни за столом." }
+      },
+      {
+        "title": { "en": "Not the church choir.", "ru": "Это не церковный хор." },
+        "text": { "en": "Nobody signs you up to sing on Sunday. We sing because it's good for us.", "ru": "На воскресную службу никто не запишет. Поём, потому что это хорошо для души." }
+      }
+    ],
+    "closer": {
+      "en": "If you've ever sung “Happy Birthday” at a party, you'll be fine. If you haven't, come anyway and sit next to someone loud.",
+      "ru": "Если вы хоть раз пели «С днём рождения» за столом, справитесь. А если нет, всё равно приходите и садитесь рядом с тем, кто поёт громко."
+    },
+    "image_alt": {
+      "en": "Illustration: men raising glasses of red wine over bread and candles",
+      "ru": "Иллюстрация: мужчины поднимают бокалы с красным вином над хлебом и свечами"
+    }
+  }
+}

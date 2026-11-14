@@ -1,0 +1,171 @@
+/* Bodbe Brothers — «Длинный стол в сумерках». См. DESIGN.md */
+
+@font-face { font-family: "Alegreya"; font-weight: 500; font-display: swap;
+  src: url("fonts/alegreya-latin-500-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
+@font-face { font-family: "Alegreya"; font-weight: 500; font-display: swap;
+  src: url("fonts/alegreya-cyrillic-500-normal.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Alegreya"; font-weight: 700; font-display: swap;
+  src: url("fonts/alegreya-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
+@font-face { font-family: "Alegreya"; font-weight: 700; font-display: swap;
+  src: url("fonts/alegreya-cyrillic-700-normal.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Alegreya Sans"; font-weight: 400; font-display: swap;
+  src: url("fonts/alegreya-sans-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
+@font-face { font-family: "Alegreya Sans"; font-weight: 400; font-display: swap;
+  src: url("fonts/alegreya-sans-cyrillic-400-normal.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Alegreya Sans"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("fonts/alegreya-sans-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 500; font-display: swap;
+  src: url("fonts/alegreya-sans-latin-500-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
+@font-face { font-family: "Alegreya Sans"; font-weight: 500; font-display: swap;
+  src: url("fonts/alegreya-sans-cyrillic-500-normal.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Alegreya Sans"; font-weight: 700; font-display: swap;
+  src: url("fonts/alegreya-sans-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
+@font-face { font-family: "Alegreya Sans"; font-weight: 700; font-display: swap;
+  src: url("fonts/alegreya-sans-cyrillic-700-normal.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Noto Serif Georgian"; font-weight: 500; font-display: swap;
+  src: url("fonts/noto-serif-georgian-georgian-500-normal.woff2") format("woff2"); }
+
+:root {
+  --espresso: #140b00;
+  --cocoa: #0b0600;
+  --wine: #4a1219;
+  --vine: #2b3218;
+  --stone: #efe3cf;
+  --cream: #fff1e0;
+  --muted: #c2b29d;
+  --ink: #1e1408;
+  --walnut: #43392d;
+  --gold: #d4a24c;
+  --gold-hi: #e6b965;
+
+  --serif: "Alegreya", Georgia, "Times New Roman", serif;
+  --sans: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --georgian: "Noto Serif Georgian", "Sylfaen", serif;
+
+  --gutter: 20px;
+  --section: 72px;
+  --radius: 6px;
+  color-scheme: dark;
+}
+@media (min-width: 900px) { :root { --gutter: 40px; --section: 120px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+body {
+  margin: 0;
+  background: var(--espresso);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 19px;
+  line-height: 1.55;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration-color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { color: var(--gold-hi); }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(34px, 6vw, 56px); letter-spacing: -0.01em; margin-bottom: 0.45em; }
+h3 { font-size: clamp(22px, 2.4vw, 26px); }
+p { margin: 0 0 1em; text-wrap: pretty; }
+
+.wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter); }
+
+.skip { position: absolute; left: 12px; top: -60px; z-index: 10; background: var(--gold); color: var(--espresso);
+  padding: 12px 18px; border-radius: 9999px; font-weight: 700; text-decoration: none; }
+.skip:focus { top: 12px; color: var(--espresso); }
+
+/* ---------- Top bar ---------- */
+.topbar { position: absolute; inset: 0 0 auto 0; z-index: 5; }
+.topbar__in { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 16px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700;
+  font-size: 20px; text-decoration: none; color: var(--cream); }
+.brand__cross { display: inline-block; width: 28px; height: 28px; color: var(--gold); }
+.brand__cross svg { width: 100%; height: 100%; }
+.brand__cross g { stroke-width: 22; }
+.lang { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid var(--cream);
+  border-radius: 9999px; text-decoration: none; font-weight: 500; font-size: 17px; background: rgba(20, 11, 0, 0.55); }
+.lang:hover { border-color: var(--gold-hi); }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; background: var(--espresso); }
+.hero__media img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.hero__media { display: block; position: relative; }
+.hero__media::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(20, 11, 0, 0.55) 0%, rgba(20, 11, 0, 0) 22%, rgba(20, 11, 0, 0) 62%, var(--espresso) 100%); }
+.hero__in { position: relative; margin-top: -72px; padding-bottom: var(--section); }
+.eyebrow, .kicker { font-family: var(--sans); font-weight: 500; font-size: 16px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+.hero__title { font-size: clamp(48px, 13vw, 92px); font-weight: 700; letter-spacing: -0.02em; line-height: 0.95; margin-bottom: 18px; }
+.hero__tagline { font-family: var(--serif); font-size: clamp(24px, 3.4vw, 34px); line-height: 1.2; margin-bottom: 16px; color: var(--cream); }
+.hero__lead { color: var(--muted); max-width: 30em; margin-bottom: 28px; }
+
+@media (min-width: 900px) {
+  .hero { min-height: min(100vh, 900px); display: flex; align-items: flex-end; }
+  .hero__media { position: absolute; inset: 0; }
+  .hero__media img { height: 100%; aspect-ratio: auto; object-position: 70% 40%; }
+  .hero__media::after { background:
+      linear-gradient(to right, rgba(20, 11, 0, 0.94) 0%, rgba(20, 11, 0, 0.78) 32%, rgba(20, 11, 0, 0.1) 62%, rgba(20, 11, 0, 0) 100%),
+      linear-gradient(to bottom, rgba(20, 11, 0, 0.6) 0%, rgba(20, 11, 0, 0) 18%, rgba(20, 11, 0, 0) 75%, var(--espresso) 100%); }
+  .hero__in { margin-top: 0; padding-top: 140px; padding-bottom: 96px; }
+  .hero__text { max-width: 560px; }
+}
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; gap: 12px; text-align: left; min-height: 56px; padding: 12px 18px 12px 26px;
+  border-radius: 9999px; text-decoration: none; font-weight: 500; font-size: 18px; line-height: 1.25;
+  transition: background-color 150ms ease, color 150ms ease; }
+.btn--gold { background: var(--gold); color: var(--espresso); }
+.btn--gold:hover { background: var(--gold-hi); color: var(--espresso); }
+.btn__label { font-weight: 700; }
+.btn__value { white-space: nowrap; }
+.btn__arrow { flex: none; }
+.btn__arrow { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px;
+  background: var(--espresso); color: var(--gold); font-size: 18px; margin-left: 4px; }
+
+/* ---------- Sections ---------- */
+.section { padding: var(--section) 0; }
+.lead { font-size: clamp(21px, 2.2vw, 23px); line-height: 1.5; max-width: 34em; }
+
+.about { border-top: 1px solid var(--walnut); }
+.about__grid { display: grid; gap: 48px; }
+@media (min-width: 900px) { .about__grid { grid-template-columns: 1.15fr 0.85fr; gap: 72px; align-items: center; } }
+.about__not-title { margin: 40px 0 8px; color: var(--gold); font-size: 22px; }
+.nots { list-style: none; margin: 0 0 32px; padding: 0; max-width: 34em; }
+.nots li { padding: 18px 0 18px 36px; border-bottom: 1px solid var(--walnut); position: relative; color: var(--muted); }
+.nots li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+.nots strong { color: var(--cream); font-weight: 700; }
+.closer { font-family: var(--serif); font-size: 22px; line-height: 1.4; max-width: 30em; font-style: normal; }
+.photo { width: 100%; border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 50%; }
+.about__figure { margin: 0; }
+
+.stub { border-top: 1px solid var(--walnut); color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.footer { background: var(--cocoa); padding: 48px 0 56px; color: var(--muted); font-size: 17px; }
+.footer__in { display: grid; gap: 16px; }
+.footer__brand { display: flex; align-items: center; gap: 10px; color: var(--cream); font-family: var(--serif); font-weight: 700; font-size: 20px; }
+@media (min-width: 900px) { .footer__in { grid-template-columns: 1fr auto; align-items: end; } }
+
+/* ---------- Preview marks (only with --preview) ---------- */
+.pv { color: inherit; border-radius: 3px; padding: 0 4px; }
+.pv-null { background: #ff3d7f; color: #fff; outline: 2px dashed #fff; }
+.pv-tr { background: #3d7bff; color: #fff; }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .hero__media img { aspect-ratio: 4 / 3; object-position: 50% 30%; }
+}
