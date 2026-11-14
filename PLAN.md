@@ -8,7 +8,7 @@
 | 2 | Men who like to sing | espresso + фото `singing` | Клуб: собираемся петь старые песни |
 | 3 | Two steps | espresso | Собрались (7 pm) → поём (около часа) |
 | 4 | Why Bodbe | тёмное вино + фото `kakheti` | Бодбе — деревня в винной Кахетии; «BOD-beh»; Georgia the country, not the state |
-| 5 | The first songs | espresso | Many Years, Shen Khar Venakhi, Christmas carols; `<audio>` только если файл есть |
+| 5 | The first songs | espresso | В основном песнопения православных народов и богослужебное пение. Many Years, Shen Khar Venakhi, колядки; `<audio>` только если файл есть |
 | 6 | First stop: Christmas | espresso | Колядки для больных и пожилых |
 | 7 | When and where | зелень лозы | Расписание, ближайшая дата («скоро»), адрес, Google Maps |
 | 8 | Before you ask | светлый камень | Не умею петь / надо ли быть верующим / язык / бесплатно / что принести |

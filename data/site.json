@@ -76,18 +76,18 @@
   "songs": {
     "kicker": "What we sing",
     "title": "The first songs",
-    "intro": "Short, singable, and old enough that nobody remembers who wrote them down first. Recordings to practise with will appear here as we make them.",
+    "intro": "Mostly the sacred music of the Orthodox peoples: Orthodox liturgical chant, and the hymns and carols that grew up around it in Russia, Ukraine, Georgia and beyond. Old music, made to be sung together.",
     "items": [
       {
         "title": "Many Years",
         "note": null,
-        "text": "Sung for birthdays, anniversaries and guests of honour. A handful of words; you'll be singing it by the second round.",
+        "text": "A short Orthodox hymn of good wishes, sung for birthdays, name days and guests of honour. A handful of words; you'll be singing it by the second round.",
         "audio": null
       },
       {
         "title": "Shen Khar Venakhi",
         "note": null,
-        "text": "A medieval Georgian song in three-part harmony. The title means “You are a vineyard.” Slow, and once you've heard it you won't forget it.",
+        "text": "A medieval Georgian hymn to the Mother of God. The title means “You are a vineyard.” Slow, in three voices, and once you've heard it you won't forget it.",
         "audio": null
       },
       {
@@ -128,11 +128,11 @@
       },
       {
         "q": "We meet at a church. Do I have to be religious?",
-        "a": "No. This is a singing club, not a service, and nobody will quiz you on anything. Come as you are."
+        "a": "No. This is a singing club, not a service. Much of what we sing is church music, but nobody will quiz you on anything. Come as you are."
       },
       {
         "q": "What language?",
-        "a": "We talk in English. A few songs are in other languages; we take the words slowly so nobody gets lost."
+        "a": "We talk in English. We sing in English, Church Slavonic, Georgian and other languages, and take the words slowly so nobody gets lost."
       },
       {
         "q": "How much does it cost?",
