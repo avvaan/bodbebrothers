@@ -192,7 +192,7 @@ class Page:
       <p class="hero__tagline">{self.t('hero.tagline')}</p>
       <p class="hero__lead">{self.t('hero.lead')}</p>
       <a class="btn btn--gold" href="#when">
-        <span class="btn__text"><span class="btn__label">{self.t('hero.cta_prefix')}:</span> <span class="btn__value">{self.next_meeting()}</span></span>
+        <span class="btn__text"><span class="btn__label">{self.t('hero.cta_prefix') if self.raw('schedule.next_meeting') else self.t('hero.cta_prefix_regular')}:</span> <span class="btn__value">{self.next_meeting()}</span></span>
         <span class="btn__arrow" aria-hidden="true">↓</span>
       </a>
     </div>

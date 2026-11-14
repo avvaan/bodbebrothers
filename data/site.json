@@ -9,8 +9,8 @@
     "next_meeting": null,
     "time": "19:00",
     "regular": {
-      "en": "Tuesdays",
-      "ru": "По вторникам"
+      "en": "Two Tuesdays a month",
+      "ru": "Два вторника в месяц"
     },
     "room": {
       "en": null,
@@ -121,6 +121,10 @@
     "image_alt": {
       "en": "Illustration: men singing together at a long candlelit table under a grapevine at sunset",
       "ru": "Иллюстрация: мужчины поют за длинным столом со свечами под виноградной лозой на закате"
+    },
+    "cta_prefix_regular": {
+      "en": "We meet",
+      "ru": "Встречаемся"
     }
   },
   "about": {
@@ -450,7 +454,10 @@
           "en": "How much does it cost?",
           "ru": "Сколько стоит?"
         },
-        "a": null
+        "a": {
+          "en": "Nothing. It's free.",
+          "ru": "Нисколько. Это бесплатно."
+        }
       },
       {
         "q": {
@@ -481,8 +488,8 @@
           "ru": "Просто приходите"
         },
         "text": {
-          "en": "No sign-up, no list. Just walk in.",
-          "ru": "Без записи и без списков. Просто заходите."
+          "en": "No sign-up, no list, no fee. Just walk in.",
+          "ru": "Без записи, без списков, бесплатно. Просто заходите."
         }
       },
       {
