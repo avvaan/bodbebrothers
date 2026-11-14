@@ -153,13 +153,97 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .photo { width: 100%; border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 50%; }
 .about__figure { margin: 0; }
 
-.stub { border-top: 1px solid var(--walnut); color: var(--muted); }
+
+.muted { color: var(--muted); }
+
+/* ---------- Bands ---------- */
+.band--wine { background: var(--wine); }
+.band--vine { background: var(--vine); }
+.band--stone { background: var(--stone); color: var(--ink); }
+.band--stone .kicker { color: #7a4a10; }
+.band--stone a { color: var(--ink); text-decoration-color: #7a4a10; }
+
+/* ---------- How ---------- */
+.how { border-top: 1px solid var(--walnut); }
+.how__grid { display: grid; gap: 48px; }
+@media (min-width: 900px) { .how__grid { grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; } }
+.steps { list-style: none; margin: 8px 0 0; padding: 0; }
+.step { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--walnut); }
+.step:last-child { border-bottom: 0; }
+.step__num { font-family: var(--serif); font-weight: 700; font-size: 56px; line-height: 0.9; color: var(--gold); }
+.step h3 { margin-bottom: 6px; }
+.step__time { display: inline-block; font-family: var(--sans); font-weight: 500; font-size: 16px; color: var(--gold);
+  letter-spacing: 0.04em; margin-left: 6px; white-space: nowrap; }
+.step p { color: var(--muted); margin: 0; }
+.how__figure { margin: 0; }
+.photo--wide { aspect-ratio: 3 / 2; }
+
+/* ---------- Bodbe ---------- */
+.bodbe__grid { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 900px) { .bodbe__grid { grid-template-columns: 1.3fr 0.7fr; gap: 72px; } }
+.bodbe .kicker { color: var(--gold-hi); }
+.bodbe__text p { max-width: 34em; }
+.bodbe__ka { font-family: var(--georgian); font-weight: 500; font-size: clamp(30px, 5vw, 44px); color: var(--gold-hi);
+  margin: -4px 0 24px; letter-spacing: 0.02em; }
+.bodbe__cross { margin: 0 auto; max-width: 300px; width: 60%; color: var(--gold-hi); text-align: center; }
+.bodbe__cross svg { width: 100%; }
+.bodbe__cross g { stroke-width: 9; }
+.bodbe__cross figcaption { margin-top: 12px; font-size: 16px; color: #e8cfc6; }
+
+/* ---------- Songs ---------- */
+.song-list { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 0; counter-reset: song; }
+@media (min-width: 900px) { .song-list { grid-template-columns: 1fr 1fr; column-gap: 72px; } }
+.song { padding: 24px 0; border-top: 1px solid var(--walnut); }
+.song h3 { margin-bottom: 8px; }
+.song__note { display: block; margin-top: 4px; font-family: var(--sans); font-size: 17px; font-weight: 400; color: var(--gold); }
+.song__note[lang="ka"] { font-family: var(--georgian); }
+.song p { color: var(--muted); margin-bottom: 12px; max-width: 32em; }
+.song audio { width: 100%; max-width: 420px; height: 48px; }
+
+/* ---------- Goals ---------- */
+.goals { border-top: 1px solid var(--walnut); }
+.goal-list { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 40px; }
+@media (min-width: 900px) { .goal-list { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.goal { border-left: 2px solid var(--gold); padding-left: 22px; }
+.goal__when { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 4vw, 40px); line-height: 1; color: var(--gold); margin-bottom: 12px; }
+.goal h3 { margin-bottom: 8px; }
+.goal p:last-child { color: var(--muted); }
+
+/* ---------- When ---------- */
+.facts { display: grid; gap: 24px; margin: 24px 0 32px; }
+@media (min-width: 900px) { .facts { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
+.fact { border-top: 1px solid rgba(255, 241, 224, 0.25); padding-top: 14px; }
+.fact dt { font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-hi); margin-bottom: 6px; }
+.fact dd { margin: 0; font-size: 20px; line-height: 1.45; }
+.fact__big { font-family: var(--serif); font-size: clamp(26px, 3vw, 32px) !important; line-height: 1.2 !important; }
+
+/* ---------- FAQ ---------- */
+.qa-list { margin-top: 24px; max-width: 46em; border-top: 1px solid rgba(30, 20, 8, 0.25); }
+.qa { border-bottom: 1px solid rgba(30, 20, 8, 0.25); }
+.qa summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  min-height: 64px; padding: 14px 0; font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.3; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9999px;
+  border: 1px solid var(--ink); font-family: var(--sans); font-size: 22px; line-height: 1; }
+.qa[open] summary::after { content: "−"; }
+.qa p { margin: 0 0 22px; max-width: 38em; }
+
+/* ---------- Join ---------- */
+.ways { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 16px; }
+@media (min-width: 900px) { .ways { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+.way { border: 1px solid var(--walnut); border-radius: var(--radius); padding: 24px; }
+.way h3 { margin-bottom: 8px; }
+.way p { color: var(--muted); margin-bottom: 12px; }
+.way__extra { color: var(--cream) !important; margin: 0 !important; }
+.way__link { font-family: var(--serif); font-weight: 700; font-size: 24px; color: var(--gold); white-space: nowrap; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--cocoa); padding: 48px 0 56px; color: var(--muted); font-size: 17px; }
-.footer__in { display: grid; gap: 16px; }
+.footer__in { display: grid; gap: 24px; }
+.footer__small { font-size: 16px; }
+.footer a { color: var(--cream); }
 .footer__brand { display: flex; align-items: center; gap: 10px; color: var(--cream); font-family: var(--serif); font-weight: 700; font-size: 20px; }
-@media (min-width: 900px) { .footer__in { grid-template-columns: 1fr auto; align-items: end; } }
+@media (min-width: 900px) { .footer__in { grid-template-columns: 1fr auto; gap: 72px; } }
 
 /* ---------- Preview marks (only with --preview) ---------- */
 .pv { color: inherit; border-radius: 3px; padding: 0 4px; }
