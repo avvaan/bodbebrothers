@@ -1,6 +1,5 @@
 {
   "_help": "Единственный источник правды для сайта. После правки запустите: python3 tools/build.py. Поля со значением null показываются на сайте как «скоро». Подробности в README.md.",
-
   "schedule": {
     "_help": "next_meeting: дата ближайшей встречи в формате ГГГГ-ММ-ДД, например \"2026-12-01\". time: время в 24-часовом формате, например \"19:00\". regular: как часто встречаемся. room: где именно в здании.",
     "next_meeting": null,
@@ -8,12 +7,10 @@
     "regular": "1st & 3rd Tuesday of the month",
     "room": null
   },
-
   "contact": {
     "_help": "Контакт для записи. Только то, что уже опубликовано на сайте прихода или что прямо дал о. Андрей. Личные телефоны участников сюда не пишем.",
     "signup_email": null
   },
-
   "venue": {
     "name": "Saint Nina Orthodox Church",
     "address_line1": "6832 Hanging Moss Rd",
@@ -24,10 +21,9 @@
     "website_label": "stninaorlando.org",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=6832+Hanging+Moss+Rd%2C+Orlando%2C+FL+32807"
   },
-
   "ui": {
     "site_title": "Bodbe Brothers — a men's singing club in Orlando",
-    "meta_description": "A men's singing club in Orlando. Half the evening we sing, half we sit at the table. No auditions, no sheet music, free.",
+    "meta_description": "A men's singing club in Orlando. Old songs, good company, a long table. No experience needed, free.",
     "skip_link": "Skip to content",
     "coming_soon": "coming soon",
     "date_soon": "date coming soon",
@@ -35,45 +31,43 @@
     "answer_soon": "We'll answer this one soon.",
     "audio_soon": "Practice recording coming soon"
   },
-
   "hero": {
     "eyebrow": "Orlando, Florida",
     "title": "Bodbe Brothers",
-    "tagline": "Half the evening we sing. The other half we eat.",
-    "lead": "A men's singing club in Orlando. No auditions, no sheet music, no experience needed. Just come.",
+    "tagline": "A men's club that sings.",
+    "lead": "Old songs, good company and a long table, twice a month in Orlando. No experience needed. Just come.",
     "cta_prefix": "Next meeting",
     "cta_prefix_regular": "We meet",
     "image_alt": "Illustration: men singing together at a long candlelit table under a grapevine at sunset"
   },
-
   "about": {
     "kicker": "What this is",
     "title": "A club, not a choir",
-    "body": "Bodbe Brothers is a bunch of men who get together to sing and to eat. About forty-five minutes of singing, about forty-five minutes at the table. That's the whole plan.",
-    "not_title": "What it isn't",
-    "nots": [
-      { "title": "No auditions.", "text": "Nobody will ask you to sing alone. Ever." },
-      { "title": "No sheet music.", "text": "We learn by ear, one line at a time, the way men have always learned songs at the table." },
-      { "title": "No concerts.", "text": "Nobody's putting you on a stage. We sing because it's good for us." }
-    ],
+    "body": "Bodbe Brothers is a bunch of men who get together to sing old songs and then share a meal. That's the whole plan.",
+    "nots": [],
     "closer": "If you've ever sung “Happy Birthday” at a party, you'll be fine. If you haven't, come anyway and sit next to someone loud.",
     "image_alt": "Illustration: men raising glasses of red wine over bread and candles"
   },
-
   "how": {
     "kicker": "How an evening goes",
     "title": "Three steps. No surprises.",
     "steps": [
-      { "label": "Gather",
-        "text": "Walk in, say hello, grab a coffee. Nobody expects you to know anyone. Someone will be waving at you." },
-      { "label": "Sing", "time": "about 45 min",
-        "text": "A short warm-up, then one song, line by line. The leader sings, we sing it back. By the end you'll know a verse, maybe two." },
-      { "label": "Sit down at the table", "time": "about 45 min",
-        "text": "Food, something to drink, conversation. This is where strangers stop being strangers. Sometimes the singing starts again." }
+      {
+        "label": "Gather",
+        "text": "Walk in, say hello, grab a coffee. Nobody expects you to know anyone. Someone will be waving at you."
+      },
+      {
+        "label": "Sing",
+        "text": "A short warm-up, then we work on a song together. By the end of the evening you'll know a verse, maybe two.",
+        "time": "about an hour"
+      },
+      {
+        "label": "Sit down at the table",
+        "text": "Food, something to drink, conversation. This is where strangers stop being strangers. Sometimes the singing starts again."
+      }
     ],
     "image_alt": "Illustration: men of different ages singing from sheets in a stone hall, an older man conducting"
   },
-
   "bodbe": {
     "kicker": "Why “Bodbe”",
     "title": "Say it: BOD-beh",
@@ -84,34 +78,42 @@
     ],
     "image_alt": "Illustration: vineyard hills of Kakheti at dusk"
   },
-
   "songs": {
     "kicker": "What we sing",
     "title": "The first songs",
     "intro": "Short, singable, and old enough that nobody remembers who wrote them down first. Recordings to practise with will appear here as we make them.",
     "items": [
-      { "title": "Many Years", "note": null,
+      {
+        "title": "Many Years",
+        "note": null,
         "text": "The toast song: sung for birthdays, anniversaries and guests of honour. A handful of words; you'll be singing it by the second round.",
-        "audio": null },
-      { "title": "Shen Khar Venakhi", "note": null,
+        "audio": null
+      },
+      {
+        "title": "Shen Khar Venakhi",
+        "note": null,
         "text": "A medieval Georgian song in three-part harmony. The title means “You are a vineyard.” Slow, and once you've heard it you won't forget it.",
-        "audio": null },
-      { "title": "Christmas carols", "note": null,
+        "audio": null
+      },
+      {
+        "title": "Christmas carols",
+        "note": null,
         "text": "Carols from the different homelands of the men around the table. Learned in the autumn, sung in December, see below.",
-        "audio": null }
+        "audio": null
+      }
     ]
   },
-
   "goals": {
     "kicker": "What we're working toward",
     "title": "First stop: Christmas",
     "items": [
-      { "when": "December",
+      {
+        "when": "December",
         "title": "Carols for people who can't get out",
-        "text": "We'll take the carols to people in our community who are sick or elderly and can't get out much. A few songs at the door, a few minutes of company." }
+        "text": "We'll take the carols to people in our community who are sick or elderly and can't get out much. A few songs at the door, a few minutes of company."
+      }
     ]
   },
-
   "when": {
     "kicker": "When and where",
     "title": "Tuesday nights in Orlando",
@@ -121,35 +123,48 @@
     "map_button": "Open in Google Maps",
     "parking": null
   },
-
   "faq": {
     "kicker": "Questions",
     "title": "Before you ask",
     "items": [
-      { "q": "I can't sing.",
-        "a": "Most of us can't, officially. We learn by ear, in a group, and nobody sings alone. If you can hum along to the radio, you're in." },
-      { "q": "We meet at a church. Do I have to be religious?",
-        "a": "No. This is a singing club, not a service, and nobody will quiz you on anything. Come as you are." },
-      { "q": "What language?",
-        "a": "We talk in English. A few songs are in other languages; we learn the words slowly, line by line, so nobody gets lost." },
-      { "q": "How much does it cost?",
-        "a": "Nothing. It's free." },
-      { "q": "What should I bring?",
-        "a": "Just yourself. And maybe a friend." }
+      {
+        "q": "I can't sing.",
+        "a": "Most of us can't, officially. Come anyway: the point is singing together, not singing well. If you can hum along to the radio, you're in."
+      },
+      {
+        "q": "We meet at a church. Do I have to be religious?",
+        "a": "No. This is a singing club, not a service, and nobody will quiz you on anything. Come as you are."
+      },
+      {
+        "q": "What language?",
+        "a": "We talk in English. A few songs are in other languages; we take the words slowly so nobody gets lost."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "Nothing. It's free."
+      },
+      {
+        "q": "What should I bring?",
+        "a": "Just yourself. And maybe a friend."
+      }
     ]
   },
-
   "join": {
     "kicker": "How to join",
     "title": "Two ways in",
     "ways": [
-      { "key": "visit", "title": "Just come",
-        "text": "No sign-up, no list, no fee. Just walk in." },
-      { "key": "phone", "title": "Call first, if you'd rather",
-        "text": "Call the office and ask about Bodbe Brothers. We'll get back to you." }
+      {
+        "key": "visit",
+        "title": "Just come",
+        "text": "No sign-up, no list, no fee. Just walk in."
+      },
+      {
+        "key": "phone",
+        "title": "Call first, if you'd rather",
+        "text": "Call the office and ask about Bodbe Brothers. We'll get back to you."
+      }
     ]
   },
-
   "footer": {
     "venue_link": "Venue",
     "note": "Bodbe Brothers is a men's singing club that meets at Saint Nina Orthodox Church, Orlando.",

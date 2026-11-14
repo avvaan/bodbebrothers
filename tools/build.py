@@ -148,9 +148,13 @@ class Page:
 </section>"""
 
     def about(self) -> str:
-        nots = "\n".join(
-            f"        <li><strong>{self.t(f'about.nots.{i}.title')}</strong> {self.t(f'about.nots.{i}.text')}</li>"
-            for i in range(self.n("about.nots")))
+        nots = ""
+        if self.n("about.nots"):
+            items = "\n".join(
+                f"        <li><strong>{self.t(f'about.nots.{i}.title')}</strong> {self.t(f'about.nots.{i}.text')}</li>"
+                for i in range(self.n("about.nots")))
+            nots = (f'      <h3 class="about__not-title">{self.t("about.not_title")}</h3>\n'
+                    f'      <ul class="nots">\n{items}\n      </ul>')
         photo = self.img("table", [720, 1200], "about.image_alt", "(min-width: 900px) 40vw, 100vw", cls="photo")
         return f"""<section class="section about" id="about" aria-labelledby="about-title">
   <div class="wrap about__grid">
@@ -158,10 +162,7 @@ class Page:
       <p class="kicker">{self.t('about.kicker')}</p>
       <h2 id="about-title">{self.t('about.title')}</h2>
       <p class="lead">{self.t('about.body')}</p>
-      <h3 class="about__not-title">{self.t('about.not_title')}</h3>
-      <ul class="nots">
 {nots}
-      </ul>
       <p class="closer">{self.t('about.closer')}</p>
     </div>
     <figure class="about__figure">{photo}</figure>
@@ -171,11 +172,17 @@ class Page:
     def how(self) -> str:
         steps = []
         for i in range(self.n("how.steps")):
-            tm = self.time_str() if i == 0 else self.t(f"how.steps.{i}.time")
+            if i == 0:
+                tm = self.time_str()
+            elif self.raw(f"how.steps.{i}.time"):
+                tm = self.t(f"how.steps.{i}.time")
+            else:
+                tm = ""
+            tm_html = f' <span class="step__time">{tm}</span>' if tm else ""
             steps.append(f"""      <li class="step">
         <span class="step__num" aria-hidden="true">{i + 1}</span>
         <div>
-          <h3>{self.t(f'how.steps.{i}.label')} <span class="step__time">{tm}</span></h3>
+          <h3>{self.t(f'how.steps.{i}.label')}{tm_html}</h3>
           <p>{self.t(f'how.steps.{i}.text')}</p>
         </div>
       </li>""")
