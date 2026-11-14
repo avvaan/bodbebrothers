@@ -223,3 +223,4 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 @media (min-width: 600px) and (max-width: 899px) {
   .hero__media img { aspect-ratio: 4 / 3; object-position: 50% 30%; }
 }
+.how__text { max-width: 760px; }

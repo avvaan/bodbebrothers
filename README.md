@@ -86,8 +86,7 @@ python3 tools/build.py && python3 tools/check_site.py
 |---|---|---|
 | `hero-1200.webp`, `hero-1920.webp` | первый экран, компьютер | 16:9 |
 | `hero-m-600.webp`, `hero-m-900.webp` | первый экран, телефон | 4:5 |
-| `table-720.webp`, `table-1200.webp` | «A club, not a choir loft» | 3:2 |
-| `singing-720.webp`, `singing-1200.webp` | «Three steps» | 3:2 |
+| `singing-720.webp`, `singing-1200.webp` | «Men who like to sing» | 3:2 |
 | `kakheti-900.webp`, `kakheti-1600.webp` | «Why Bodbe» (пейзаж, без людей) | 16:9 |
 
 Поправьте тексты `image_alt` в данных и уберите `footer.images_note`.

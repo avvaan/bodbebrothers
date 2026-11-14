@@ -155,7 +155,7 @@ class Page:
                 for i in range(self.n("about.nots")))
             nots = (f'      <h3 class="about__not-title">{self.t("about.not_title")}</h3>\n'
                     f'      <ul class="nots">\n{items}\n      </ul>')
-        photo = self.img("table", [720, 1200], "about.image_alt", "(min-width: 900px) 40vw, 100vw", cls="photo")
+        photo = self.img("singing", [720, 1200], "about.image_alt", "(min-width: 900px) 40vw, 100vw", cls="photo photo--wide")
         return f"""<section class="section about" id="about" aria-labelledby="about-title">
   <div class="wrap about__grid">
     <div class="about__text">
@@ -186,18 +186,15 @@ class Page:
           <p>{self.t(f'how.steps.{i}.text')}</p>
         </div>
       </li>""")
-        photo = self.img("singing", [720, 1200], "how.image_alt", "(min-width: 900px) 45vw, 100vw",
-                         cls="photo photo--wide")
         return f"""<section class="section how" id="how" aria-labelledby="how-title">
-  <div class="wrap how__grid">
-    <div>
+  <div class="wrap">
+    <div class="how__text">
       <p class="kicker">{self.t('how.kicker')}</p>
       <h2 id="how-title">{self.t('how.title')}</h2>
       <ol class="steps">
 {chr(10).join(steps)}
       </ol>
     </div>
-    <figure class="how__figure">{photo}</figure>
   </div>
 </section>"""
 

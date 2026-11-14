@@ -23,7 +23,7 @@
   },
   "ui": {
     "site_title": "Bodbe Brothers — a men's singing club in Orlando",
-    "meta_description": "A men's singing club in Orlando. Old songs, good company, a long table. No experience needed, free.",
+    "meta_description": "A men's singing club in Orlando. Old songs and good company. No experience needed, free.",
     "skip_link": "Skip to content",
     "coming_soon": "coming soon",
     "date_soon": "date coming soon",
@@ -35,45 +35,40 @@
     "eyebrow": "Orlando, Florida",
     "title": "Bodbe Brothers",
     "tagline": "A men's club that sings.",
-    "lead": "Old songs, good company and a long table, twice a month in Orlando. No experience needed. Just come.",
+    "lead": "Old songs and good company, twice a month in Orlando. No experience needed. Just come.",
     "cta_prefix": "Next meeting",
     "cta_prefix_regular": "We meet",
     "image_alt": "Illustration: men singing together at a long candlelit table under a grapevine at sunset"
   },
   "about": {
     "kicker": "What this is",
-    "title": "Songs first, then supper",
-    "body": "Bodbe Brothers is a bunch of men who get together to sing old songs and then share a meal. That's the whole plan.",
+    "title": "Men who like to sing",
+    "body": "Bodbe Brothers is a bunch of men who get together to sing old songs. That's the whole plan.",
     "nots": [],
     "closer": "If you've ever sung “Happy Birthday” at a party, you'll be fine. If you haven't, come anyway and sit next to someone loud.",
-    "image_alt": "Illustration: men raising glasses of red wine over bread and candles"
+    "image_alt": "Illustration: men of different ages singing from sheets in a stone hall, an older man conducting"
   },
   "how": {
     "kicker": "How an evening goes",
-    "title": "Three steps. No surprises.",
+    "title": "Two steps. No surprises.",
     "steps": [
       {
         "label": "Gather",
-        "text": "Walk in, say hello, grab a coffee. Nobody expects you to know anyone. Someone will be waving at you."
+        "text": "Walk in and say hello. Nobody expects you to know anyone. Someone will be waving at you."
       },
       {
         "label": "Sing",
-        "text": "A short warm-up, then we work on a song together. By the end of the evening you'll know a verse, maybe two.",
-        "time": "about an hour"
-      },
-      {
-        "label": "Sit down at the table",
-        "text": "Food, something to drink, conversation. This is where strangers stop being strangers. Sometimes the singing starts again."
+        "time": "about an hour",
+        "text": "A short warm-up, then we work on a song together. By the end of the evening you'll know a verse, maybe two."
       }
-    ],
-    "image_alt": "Illustration: men of different ages singing from sheets in a stone hall, an older man conducting"
+    ]
   },
   "bodbe": {
     "kicker": "Why “Bodbe”",
     "title": "Say it: BOD-beh",
     "paras": [
-      "Bodbe is a village in Kakheti, the wine country of eastern Georgia. Georgia the country, that is, not the state, though we hear Savannah is lovely.",
-      "Kakheti is known for long tables, homemade wine, and men who sing together in harmony late into the evening.",
+      "Bodbe is a village in Kakheti, a region of eastern Georgia. Georgia the country, that is, not the state, though we hear Savannah is lovely.",
+      "Kakheti is known for men who sing together in harmony late into the evening.",
       "That's the kind of evening we're after. Hence the name."
     ],
     "image_alt": "Illustration: vineyard hills of Kakheti at dusk"
@@ -86,7 +81,7 @@
       {
         "title": "Many Years",
         "note": null,
-        "text": "The toast song: sung for birthdays, anniversaries and guests of honour. A handful of words; you'll be singing it by the second round.",
+        "text": "Sung for birthdays, anniversaries and guests of honour. A handful of words; you'll be singing it by the second round.",
         "audio": null
       },
       {
@@ -98,7 +93,7 @@
       {
         "title": "Christmas carols",
         "note": null,
-        "text": "Carols from the different homelands of the men around the table. Learned in the autumn, sung in December, see below.",
+        "text": "Carols from the different homelands of the men who sing with us. Learned in the autumn, sung in December, see below.",
         "audio": null
       }
     ]

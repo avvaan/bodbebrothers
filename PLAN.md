@@ -5,8 +5,8 @@
 | # | Раздел | Фон | Что внутри |
 |---|---|---|---|
 | 1 | Первый экран | фото `hero` | Название, «A men's club that sings.», Orlando, кнопка «We meet: 1st & 3rd Tuesday of the month · 7 pm» → раздел 7 |
-| 2 | Songs first, then supper | espresso + фото `table` | Клуб: поём старые песни, потом общий стол |
-| 3 | Three steps | espresso + фото `singing` | Собрались (7 pm) → поём (около часа) → сели за стол |
+| 2 | Men who like to sing | espresso + фото `singing` | Клуб: собираемся петь старые песни |
+| 3 | Two steps | espresso | Собрались (7 pm) → поём (около часа) |
 | 4 | Why Bodbe | тёмное вино + фото `kakheti` | Бодбе — деревня в винной Кахетии; «BOD-beh»; Georgia the country, not the state |
 | 5 | The first songs | espresso | Many Years, Shen Khar Venakhi, Christmas carols; `<audio>` только если файл есть |
 | 6 | First stop: Christmas | espresso | Колядки для больных и пожилых |
